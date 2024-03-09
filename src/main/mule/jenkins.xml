@@ -6,7 +6,7 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="b1f3f7fc-8f35-4315-baed-61579a3aeaed" >
-		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+		<http:listener-connection host="0.0.0.0" port="${hhtp.port}" />
 	</http:listener-config>
 	<flow name="jenkinsFlow" doc:id="9d56181c-d9ea-48f1-9be8-90e872a05a71" >
 		<http:listener doc:name="Listener" doc:id="51e4b13d-1065-47a1-9bdc-b3622f355792" config-ref="HTTP_Listener_config" path="/dev"/>
