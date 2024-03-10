@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>jenkins</artifactId>
+	<artifactId>sujalganesh</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>jenkins</name>
+	<name>sujalganesh</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +15,6 @@
 
 		<app.runtime>4.4.0-20230320</app.runtime>
 		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
-		  <munit.version>2.3.12</munit.version>
 	</properties>
 
 	<build>
@@ -33,29 +30,22 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				    <sharedLibraries>
-                        <sharedLibrary>
-                            <groupId>com.oracle</groupId>
-                            <artifactId>ojdbc6</artifactId>
-                        </sharedLibrary>
-                    </sharedLibraries>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.4.0</muleVersion>
 						<username>Gana2001</username>
 						<password>8328271978@Gana</password>
-						<applicationName>jenkins-api</applicationName>
+						<applicationName>sujal_ganesh-api</applicationName>
 						<environment>Sandbox</environment>
 						<region>us-east-1</region>
 						<workers>1</workers>
 						<workerType>MICRO</workerType>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
-							<http.port>8082</http.port>
+							<http.port>8086</http.port>
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
-
 			</plugin>
 		</plugins>
 	</build>
@@ -88,16 +78,16 @@
 			<layout>default</layout>
 		</repository>
 		<repository>
-			<id>Aditya-repo</id>
-			<name>Aditya repo</name>
-			<url>http://localhost:8081/repository/Aditya-repo/</url>
-		</repository>
-		<repository>
 			<id>mulesoft-releases</id>
 			<name>MuleSoft Releases Repository</name>
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
+		</repository><repository>
+			<id>Aditya-repo</id>
+			<name>Aditya repo</name>
+			<url>http://localhost:8081/repository/Aditya-repo/</url>
 		</repository>
+		
 	</repositories>
 
 	<pluginRepositories>
